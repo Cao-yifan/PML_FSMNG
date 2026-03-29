@@ -4,7 +4,6 @@
 This repository contains the official MATLAB implementation for the paper: **"Partial Multi-label Feature Selection via Entropy-weighted Multi-scale Neighborhood Granular Label Distribution Learning" (PML-FSMNG)**.
 
 
-**Correction**: In Eq. (18-19) of the paper, the subscript letter of C' is 'j' instead of 'i', representing the corresponding category. 
 
 ## Abstract
 
@@ -15,7 +14,7 @@ Specifically, multi-scale neighborhood systems are constructed to estimate label
 ## Requirements
 
 To run this code, you need:
-* **MATLAB** (Tested on R2021a and above)
+* **MATLAB** (Tested on R2020a and above)
 
 ## Repository Structure
 
