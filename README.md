@@ -23,6 +23,8 @@ To run this code, you need:
 * `multiscale_entropy_weighted_labels.m`: Generates the multi-scale neighborhood soft labels and calculates the entropy-driven adaptive weights.
 * `getPartialLabel.m`: Helper function to generate partial/ambiguous labels for experimental settings.
 * `music_emotion.mat`: A sample benchmark dataset provided for demonstration purposes.
+
+  
 Please get in touch with me if you have any questions about running this code!
 cao_yifan@buaa.edu.cn
 
