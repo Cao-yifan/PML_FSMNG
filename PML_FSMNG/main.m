@@ -85,7 +85,6 @@ for para_idx = 1:total_jobs
         y_train = y(cv.training(k), :);
         y_test  = y(cv.test(k), :);
 
-        y_train_true = y_true(cv.training(k), :);
         y_test_true  = y_true(cv.test(k), :);
         l_labels = size(y_train, 2);
 
@@ -104,15 +103,15 @@ for para_idx = 1:total_jobs
         % Extract top 20% important features based on weights
         row_norms = sqrt(sum(W.^2, 2));
         [~, idx_sort] = sort(row_norms, 'descend');
-        n_selected = round(0.2 * size(X, 2));
+        n_selected = floor(0.2 * size(X, 2));
         selected_features = idx_sort(1:n_selected);
         selected_features_all{k} = selected_features;
 
         % --- Model Evaluation: MLKNN ---
-        [Prior, PriorN, Cond, CondN] = MLKNN_train(X_train(:, selected_features), y_train_true', 10, 1);
+        [Prior, PriorN, Cond, CondN] = MLKNN_train(X_train(:, selected_features), y_train', 10, 1);
 
         [HL, RL, OE, CV, AP, MA, MI, AC, ~, ~] = ...
-            MLKNN_test(X_train(:, selected_features), y_train_true', ...
+            MLKNN_test(X_train(:, selected_features), y_train', ...
                        X_test(:, selected_features), y_test_true', ...
                        10, Prior, PriorN, Cond, CondN);
 
