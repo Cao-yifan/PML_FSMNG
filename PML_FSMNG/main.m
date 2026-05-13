@@ -43,7 +43,6 @@ for i = 1:size(y, 1)
 end
 
 % 5-fold stratified cross-validation setup
-rng(43);
 warning('off', 'stats:cvpartition:KFoldMissingGrp');
 cv = cvpartition(y_str, 'KFold', 5);
 
