@@ -18,7 +18,6 @@ To run this code, you need:
 
 ## Repository Structure
 
-* `main.m`: The main entry script. It loads the dataset, performs cross-validation, executes the feature selection pipeline, and prints comprehensive evaluation metrics.
 * `PML_FSMNG.m`: The core optimization solver. It iteratively optimizes the objective function with $\ell_{2,1}$-norm sparsity and graph regularization.
 * `multiscale_entropy_weighted_labels.m`: Generates the multi-scale neighborhood soft labels and calculates the entropy-driven adaptive weights.
 * `getPartialLabel.m`: Helper function to generate partial/ambiguous labels for experimental settings.
